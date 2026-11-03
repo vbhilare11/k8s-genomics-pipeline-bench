@@ -1,0 +1,29 @@
+# Genomic data (public, re-downloadable; never committed)
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.vcf
+*.vcf.gz
+*.fa
+*.fasta
+*.fa.gz
+
+# Raw experiment exports (large); processed CSVs and figures are committed
+results/**/raw/
+
+# Local tooling
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+
+# Never commit these
+*.pem
+*.key
+kubeconfig
+k3s.yaml
