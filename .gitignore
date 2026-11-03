@@ -1,0 +1,7 @@
+*.fastq
+*.fastq.gz
+*.bam
+*.vcf
+*.vcf.gz
+results/raw/
+.DS_Store
