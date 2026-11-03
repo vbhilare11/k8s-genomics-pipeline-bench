@@ -13,20 +13,24 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install linters
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q shellcheck
+          pip install --quiet yamllint
+          npm install --global --silent markdownlint-cli2
 
       - name: ShellCheck
-        uses: ludeeus/action-shellcheck@2.0.0
-        with:
-          scandir: '.'
-          severity: warning
+        run: |
+          files=$(git ls-files '*.sh')
+          echo "$files"
+          shellcheck --severity=warning $files
 
       - name: yamllint
-        uses: ibiqlik/action-yamllint@v3
-        with:
-          config_file: .yamllint.yml
+        run: yamllint -c .yamllint.yml .
 
       - name: markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v18
-        with:
-          globs: '**/*.md'
+        run: markdownlint-cli2 "**/*.md" "#node_modules"
