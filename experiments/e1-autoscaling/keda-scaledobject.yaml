@@ -1,0 +1,24 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: ngs-worker
+  namespace: ngs-bench
+spec:
+  scaleTargetRef:
+    name: ngs-worker
+  pollingInterval: 5
+  cooldownPeriod: 60
+  minReplicaCount: 0
+  maxReplicaCount: 3
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 30
+  triggers:
+    - type: redis
+      metadata:
+        address: redis.ngs-bench.svc.cluster.local:6379
+        listName: ngs:jobs
+        listLength: "2"
+        activationListLength: "0"
