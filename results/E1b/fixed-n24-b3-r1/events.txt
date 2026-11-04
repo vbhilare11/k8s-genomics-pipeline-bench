@@ -1,0 +1,19 @@
+LAST SEEN   TYPE      REASON                OBJECT                             MESSAGE
+11m         Normal    Scheduled             pod/ngs-worker-7b887dc8bd-rp7ws    Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-rp7ws to niw-lab
+11m         Warning   ScaledObjectDeleted   scaledobject/ngs-worker            ScaledObject was deleted
+11m         Normal    KEDAScalersStopped    scaledobject/ngs-worker            Stopped scalers watch
+11m         Normal    Scheduled             pod/ngs-worker-7b887dc8bd-mgtcd    Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-mgtcd to niw-lab
+11m         Normal    Scheduled             pod/ngs-worker-7b887dc8bd-5cwkc    Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-5cwkc to niw-lab
+11m         Normal    SuccessfulCreate      replicaset/ngs-worker-7b887dc8bd   Created pod: ngs-worker-7b887dc8bd-mgtcd
+11m         Normal    ScalingReplicaSet     deployment/ngs-worker              Scaled up replica set ngs-worker-7b887dc8bd from 0 to 3
+11m         Normal    SuccessfulCreate      replicaset/ngs-worker-7b887dc8bd   Created pod: ngs-worker-7b887dc8bd-5cwkc
+11m         Normal    SuccessfulCreate      replicaset/ngs-worker-7b887dc8bd   Created pod: ngs-worker-7b887dc8bd-rp7ws
+11m         Normal    Pulled                pod/ngs-worker-7b887dc8bd-mgtcd    Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Pulled                pod/ngs-worker-7b887dc8bd-rp7ws    Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Started               pod/ngs-worker-7b887dc8bd-rp7ws    Container started
+11m         Normal    Created               pod/ngs-worker-7b887dc8bd-rp7ws    Container created
+11m         Normal    Pulled                pod/ngs-worker-7b887dc8bd-5cwkc    Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Started               pod/ngs-worker-7b887dc8bd-mgtcd    Container started
+11m         Normal    Created               pod/ngs-worker-7b887dc8bd-mgtcd    Container created
+11m         Normal    Started               pod/ngs-worker-7b887dc8bd-5cwkc    Container started
+11m         Normal    Created               pod/ngs-worker-7b887dc8bd-5cwkc    Container created
