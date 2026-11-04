@@ -1,0 +1,34 @@
+# KEDA ScaledObject with an in-flight-aware second trigger.
+# KEDA takes the max desired replicas across triggers, so busy workers hold
+# capacity until they finish; the redis trigger alone scales down on queue length
+# while jobs are still running (the tail under-provisioning seen in E1).
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: ngs-worker
+  namespace: ngs-bench
+spec:
+  scaleTargetRef:
+    name: ngs-worker
+  pollingInterval: 5
+  cooldownPeriod: 60
+  minReplicaCount: 0
+  maxReplicaCount: 3
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 30
+  triggers:
+    - type: redis
+      metadata:
+        address: redis.ngs-bench.svc.cluster.local:6379
+        listName: ngs:jobs
+        listLength: "2"
+        activationListLength: "0"
+    - type: prometheus
+      metadata:
+        serverAddress: http://monitoring-kube-prometheus-prometheus.monitoring.svc:9090
+        query: sum(ngs_worker_busy)
+        threshold: "1"
+        activationThreshold: "0"

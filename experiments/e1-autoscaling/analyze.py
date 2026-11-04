@@ -16,7 +16,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "results", "E1")
+EXP = sys.argv[1] if len(sys.argv) > 1 else "E1"
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "results", EXP)
 
 
 def pct(values, p):
@@ -47,6 +48,7 @@ def analyse(meta, results, timeline):
         rep_s += int(a["ready_replicas"]) * (float(b["ts"]) - float(a["ts"]))
     return {
         "mode": meta["mode"], "replicate": meta["replicate"], "jobs": meta["jobs"],
+        "bursts": meta.get("bursts", 1), "gap_s": meta.get("gap_s", 0),
         "completed": meta["completed"], "makespan_s": round(meta["makespan_s"], 1),
         "wait_p50_s": round(pct(waits, 0.5), 1), "wait_p95_s": round(pct(waits, 0.95), 1),
         "job_median_s": round(statistics.median(durs), 1) if durs else float("nan"),
@@ -58,7 +60,8 @@ def analyse(meta, results, timeline):
 
 
 def main():
-    runs = sorted(glob.glob(os.path.join(ROOT, "*-n*-r*")))
+    runs = sorted(p for p in glob.glob(os.path.join(ROOT, "*-n*-r*"))
+                  if os.path.exists(os.path.join(p, "meta.json")))
     if not runs:
         print("no runs found", file=sys.stderr)
         return 1
