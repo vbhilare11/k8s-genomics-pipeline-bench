@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngs-worker
+  namespace: ngs-bench
+  labels:
+    app: ngs-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ngs-worker
+  template:
+    metadata:
+      labels:
+        app: ngs-worker
+    spec:
+      enableServiceLinks: false
+      terminationGracePeriodSeconds: 600
+      containers:
+        - name: worker
+          image: ngs-worker:0.1.1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: NGS_REDIS_HOST
+              value: redis
+            - name: NGS_REDIS_PORT
+              value: "6379"
+            - name: THREADS
+              value: "1"
+            - name: PIPELINE_STEPS
+              value: fastp,bwa
+          ports:
+            - containerPort: 9100
+              name: metrics
+          volumeMounts:
+            - name: data
+              mountPath: /data
+              readOnly: true
+            - name: work
+              mountPath: /tmp/work
+          resources:
+            requests:
+              cpu: "1"
+              memory: 1Gi
+            limits:
+              cpu: "1"
+              memory: 2Gi
+      volumes:
+        - name: data
+          hostPath:
+            path: /data/ngs
+            type: Directory
+        - name: work
+          emptyDir:
+            sizeLimit: 2Gi
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: ngs-worker
+  namespace: ngs-bench
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: ngs-worker
+  podMetricsEndpoints:
+    - port: metrics
+      interval: 15s
