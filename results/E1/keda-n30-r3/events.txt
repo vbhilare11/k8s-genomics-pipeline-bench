@@ -1,0 +1,128 @@
+LAST SEEN   TYPE      REASON                       OBJECT                                        MESSAGE
+11m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-dxlwn               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-dxlwn to niw-lab
+12m         Normal    ScaledObjectReady            scaledobject/ngs-worker                       ScaledObject is ready for scaling
+22m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-fs7xk               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-fs7xk to niw-lab
+1s          Normal    KEDAScaleTargetDeactivated   scaledobject/ngs-worker                       Deactivated apps/v1.Deployment ngs-bench/ngs-worker from 1 to 0
+11m         Normal    KEDAScaleTargetActivated     scaledobject/ngs-worker                       Scaled apps/v1.Deployment ngs-bench/ngs-worker from 0 to 1, triggered by s0-redis-ngs-jobs
+12m         Normal    KEDAScaleTargetDeactivated   scaledobject/ngs-worker                       Deactivated apps/v1.Deployment ngs-bench/ngs-worker from 1 to 0
+58m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-77cl4               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-77cl4 to niw-lab
+47m         Normal    KEDAScaleTargetDeactivated   scaledobject/ngs-worker                       Deactivated apps/v1.Deployment ngs-bench/ngs-worker from 1 to 0
+46m         Normal    KEDAScaleTargetActivated     scaledobject/ngs-worker                       Scaled apps/v1.Deployment ngs-bench/ngs-worker from 0 to 1, triggered by s0-redis-ngs-jobs
+47m         Normal    KEDAScalersStarted           scaledobject/ngs-worker                       Scaler redis is built
+36m         Normal    KEDAScaleTargetDeactivated   scaledobject/ngs-worker                       Deactivated apps/v1.Deployment ngs-bench/ngs-worker from 1 to 0
+22m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-8cg7r               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-8cg7r to niw-lab
+35m         Normal    KEDAScalersStopped           scaledobject/ngs-worker                       Stopped scalers watch
+11m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-fkfd2               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-fkfd2 to niw-lab
+35m         Warning   ScaledObjectDeleted          scaledobject/ngs-worker                       ScaledObject was deleted
+35m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-zj4xb               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-zj4xb to niw-lab
+12m         Normal    KEDAScalersStarted           scaledobject/ngs-worker                       Scaler redis is built
+46m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-dlz8m               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-dlz8m to niw-lab
+12m         Normal    KEDAScalersStarted           scaledobject/ngs-worker                       Started scalers watch
+35m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-rsmxt               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-rsmxt to niw-lab
+46m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-vjmjg               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-vjmjg to niw-lab
+11m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-r4kt4               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-r4kt4 to niw-lab
+57m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-dqnd4               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-dqnd4 to niw-lab
+46m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-ntw6r               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-ntw6r to niw-lab
+47m         Normal    ScaledObjectReady            scaledobject/ngs-worker                       ScaledObject is ready for scaling
+47m         Normal    KEDAScalersStarted           scaledobject/ngs-worker                       Started scalers watch
+35m         Normal    Scheduled                    pod/ngs-worker-7b887dc8bd-kdfwz               Successfully assigned ngs-bench/ngs-worker-7b887dc8bd-kdfwz to niw-lab
+59m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-nllmv               Stopping container worker
+59m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-9zpql
+59m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-nllmv
+59m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-9zpql               Stopping container worker
+58m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-77cl4
+58m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 2; reason: cpu resource utilization (percentage of request) above target
+58m         Normal    Started                      pod/ngs-worker-7b887dc8bd-77cl4               Container started
+58m         Normal    Created                      pod/ngs-worker-7b887dc8bd-77cl4               Container created
+58m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-77cl4               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+57m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 3; reason: cpu resource utilization (percentage of request) above target
+57m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-dqnd4
+57m         Normal    Started                      pod/ngs-worker-7b887dc8bd-dqnd4               Container started
+57m         Normal    Created                      pod/ngs-worker-7b887dc8bd-dqnd4               Container created
+57m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-dqnd4               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+47m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-dqnd4               Stopping container worker
+47m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-77cl4               Stopping container worker
+47m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-dqnd4
+47m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-77cl4
+47m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 1; reason: All metrics below target
+47m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-kf29q               Stopping container worker
+47m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-kf29q
+46m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-dlz8m
+46m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-dlz8m               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+46m         Normal    Created                      pod/ngs-worker-7b887dc8bd-dlz8m               Container created
+46m         Normal    Started                      pod/ngs-worker-7b887dc8bd-dlz8m               Container started
+46m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-ntw6r
+46m         Normal    Started                      pod/ngs-worker-7b887dc8bd-ntw6r               Container started
+46m         Normal    Created                      pod/ngs-worker-7b887dc8bd-ntw6r               Container created
+46m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-ntw6r               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+46m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-vjmjg
+46m         Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 3; reason: external metric s0-redis-ngs-jobs(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: ngs-worker,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+46m         Normal    Started                      pod/ngs-worker-7b887dc8bd-vjmjg               Container started
+46m         Normal    Created                      pod/ngs-worker-7b887dc8bd-vjmjg               Container created
+46m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-vjmjg               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+38m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-vjmjg
+38m         Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 2; reason: All metrics below target
+38m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-vjmjg               Stopping container worker
+37m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-dlz8m               Stopping container worker
+37m         Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 1; reason: All metrics below target
+37m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-dlz8m
+36m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-ntw6r               Stopping container worker
+36m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-ntw6r
+35m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-rsmxt
+35m         Normal    Created                      pod/ngs-worker-7b887dc8bd-zj4xb               Container created
+35m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled up replica set ngs-worker-7b887dc8bd from 0 to 3
+35m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-kdfwz               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+35m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-kdfwz
+35m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-zj4xb               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+35m         Normal    SuccessfulCreate             replicaset/ngs-worker-7b887dc8bd              Created pod: ngs-worker-7b887dc8bd-zj4xb
+35m         Normal    Created                      pod/ngs-worker-7b887dc8bd-kdfwz               Container created
+35m         Normal    Started                      pod/ngs-worker-7b887dc8bd-kdfwz               Container started
+35m         Normal    Started                      pod/ngs-worker-7b887dc8bd-zj4xb               Container started
+35m         Normal    Started                      pod/ngs-worker-7b887dc8bd-rsmxt               Container started
+35m         Normal    Created                      pod/ngs-worker-7b887dc8bd-rsmxt               Container created
+35m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-rsmxt               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+23m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled down replica set ngs-worker-7b887dc8bd from 3 to 1
+23m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-rsmxt               Stopping container worker
+23m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-zj4xb               Stopping container worker
+23m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-zj4xb
+23m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-rsmxt
+22m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled up replica set ngs-worker-7b887dc8bd from 1 to 2
+22m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-8cg7r               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+22m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 2; reason: cpu resource utilization (percentage of request) above target
+22m         Normal    Created                      pod/ngs-worker-7b887dc8bd-8cg7r               Container created
+22m         Normal    Started                      pod/ngs-worker-7b887dc8bd-8cg7r               Container started
+22m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled up replica set ngs-worker-7b887dc8bd from 2 to 3
+22m         Normal    Created                      pod/ngs-worker-7b887dc8bd-fs7xk               Container created
+22m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 3; reason: cpu resource utilization (percentage of request) above target
+22m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-fs7xk               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+22m         Normal    Started                      pod/ngs-worker-7b887dc8bd-fs7xk               Container started
+12m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-8cg7r
+12m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 2; reason: All metrics below target
+12m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-8cg7r               Stopping container worker
+12m         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-fs7xk
+12m         Normal    SuccessfulRescale            horizontalpodautoscaler/ngs-worker-cpu        New size: 1; reason: All metrics below target
+12m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-fs7xk               Stopping container worker
+12m         Normal    Killing                      pod/ngs-worker-7b887dc8bd-kdfwz               Stopping container worker
+11m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled up replica set ngs-worker-7b887dc8bd from 0 to 1
+11m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-fkfd2               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Created                      pod/ngs-worker-7b887dc8bd-fkfd2               Container created
+11m         Normal    Started                      pod/ngs-worker-7b887dc8bd-fkfd2               Container started
+11m         Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 3; reason: external metric s0-redis-ngs-jobs(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: ngs-worker,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+11m         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled up replica set ngs-worker-7b887dc8bd from 1 to 3
+11m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-r4kt4               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Started                      pod/ngs-worker-7b887dc8bd-dxlwn               Container started
+11m         Normal    Created                      pod/ngs-worker-7b887dc8bd-r4kt4               Container created
+11m         Normal    Pulled                       pod/ngs-worker-7b887dc8bd-dxlwn               Container image "ngs-worker:0.1.1" already present on machine and can be accessed by the pod
+11m         Normal    Created                      pod/ngs-worker-7b887dc8bd-dxlwn               Container created
+11m         Normal    Started                      pod/ngs-worker-7b887dc8bd-r4kt4               Container started
+2m31s       Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-fkfd2
+2m31s       Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled down replica set ngs-worker-7b887dc8bd from 3 to 2
+2m31s       Normal    Killing                      pod/ngs-worker-7b887dc8bd-fkfd2               Stopping container worker
+2m31s       Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 2; reason: All metrics below target
+91s         Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled down replica set ngs-worker-7b887dc8bd from 2 to 1
+91s         Normal    Killing                      pod/ngs-worker-7b887dc8bd-dxlwn               Stopping container worker
+91s         Normal    SuccessfulRescale            horizontalpodautoscaler/keda-hpa-ngs-worker   New size: 1; reason: All metrics below target
+91s         Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-dxlwn
+2s          Normal    ScalingReplicaSet            deployment/ngs-worker                         Scaled down replica set ngs-worker-7b887dc8bd from 1 to 0
+2s          Normal    Killing                      pod/ngs-worker-7b887dc8bd-r4kt4               Stopping container worker
+2s          Normal    SuccessfulDelete             replicaset/ngs-worker-7b887dc8bd              Deleted pod: ngs-worker-7b887dc8bd-r4kt4

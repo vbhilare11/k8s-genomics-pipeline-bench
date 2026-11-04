@@ -1,0 +1,3 @@
+{"experiment":"E1","mode":"fixed","jobs":30,"replicate":3,
+ "git_sha":"7d5a897537eeb45c653c5acce2a37e2e90badf1b","start_ts":1793770387.942507327,"end_ts":1793770980.591869413,
+ "makespan_s":592.6,"completed":30}

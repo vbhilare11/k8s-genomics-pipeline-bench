@@ -1,0 +1,40 @@
+[04:22:36] E1 mode=fixed jobs=30 rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1/fixed-n30-r1
+[04:23:12] submitting 30 jobs
+enqueued 30 jobs; queue length: 27
+[04:32:42] done: 30/30 jobs, makespan 570.7s
+[04:33:42] E1 mode=hpa jobs=30 rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1/hpa-n30-r1
+[04:34:13] submitting 30 jobs
+enqueued 30 jobs; queue length: 29
+[04:44:08] done: 30/30 jobs, makespan 595.0s
+[04:45:08] E1 mode=keda jobs=30 rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1/keda-n30-r1
+[04:45:09] waiting for KEDA to scale to 0 (cooldown)
+[04:45:39] submitting 30 jobs
+enqueued 30 jobs; queue length: 30
+[04:56:15] done: 30/30 jobs, makespan 636.1s
+[04:57:15] E1 mode=fixed jobs=30 rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1/fixed-n30-r2
+[04:57:51] submitting 30 jobs
+enqueued 30 jobs; queue length: 27
+[05:07:22] done: 30/30 jobs, makespan 570.3s
+[05:08:22] E1 mode=hpa jobs=30 rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1/hpa-n30-r2
+[05:08:53] submitting 30 jobs
+enqueued 30 jobs; queue length: 29
+[05:19:19] done: 30/30 jobs, makespan 626.3s
+[05:20:19] E1 mode=keda jobs=30 rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1/keda-n30-r2
+[05:20:19] waiting for KEDA to scale to 0 (cooldown)
+[05:20:50] submitting 30 jobs
+enqueued 30 jobs; queue length: 30
+[05:31:32] done: 30/30 jobs, makespan 641.4s
+[05:32:32] E1 mode=fixed jobs=30 rep=3 -> /root/k8s-genomics-pipeline-bench/results/E1/fixed-n30-r3
+[05:33:08] submitting 30 jobs
+enqueued 30 jobs; queue length: 27
+[05:43:00] done: 30/30 jobs, makespan 592.6s
+[05:44:00] E1 mode=hpa jobs=30 rep=3 -> /root/k8s-genomics-pipeline-bench/results/E1/hpa-n30-r3
+[05:44:31] submitting 30 jobs
+enqueued 30 jobs; queue length: 29
+[05:54:42] done: 30/30 jobs, makespan 610.2s
+[05:55:42] E1 mode=keda jobs=30 rep=3 -> /root/k8s-genomics-pipeline-bench/results/E1/keda-n30-r3
+[05:55:42] waiting for KEDA to scale to 0 (cooldown)
+[05:56:12] submitting 30 jobs
+enqueued 30 jobs; queue length: 30
+[06:07:44] done: 30/30 jobs, makespan 691.0s
+campaign complete
