@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bootstrap a single-node k3s cluster with kube-prometheus-stack and KEDA.
 #
-# Tested on Ubuntu 24.04 LTS, 4 vCPU / 8 GB. Idempotent: safe to re-run.
+# Tested on Ubuntu 26.04 LTS, 4 vCPU / 8 GB. Idempotent: safe to re-run.
 #
 # Environment overrides (all optional):
 #   K3S_VERSION          pin k3s release (default: latest stable)

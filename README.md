@@ -16,7 +16,7 @@ can make evidence-based choices rather than guesses.
 ## Layout
 
 | Path | Contents |
-|---|---|
+| --- | --- |
 | `cluster/` | Cluster bootstrap (k3s, Prometheus stack, KEDA) |
 | `workload/` | Synthetic NGS pipeline container and manifests |
 | `experiments/` | Experiment definitions and run scripts |

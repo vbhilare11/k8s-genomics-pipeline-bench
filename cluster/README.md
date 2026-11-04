@@ -2,7 +2,7 @@
 
 Single-node [k3s](https://k3s.io) with
 [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
-and [KEDA](https://keda.sh). Target: Ubuntu 24.04, 4 vCPU / 8 GB.
+and [KEDA](https://keda.sh). Target: Ubuntu 26.04, 4 vCPU / 8 GB.
 
 ## Install
 
