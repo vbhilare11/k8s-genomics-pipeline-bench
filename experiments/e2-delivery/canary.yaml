@@ -1,0 +1,26 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: ngs-worker
+  namespace: ngs-bench
+spec:
+  provider: kubernetes
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ngs-worker
+  progressDeadlineSeconds: 600
+  service:
+    port: 9100
+  analysis:
+    interval: 30s
+    threshold: 2
+    iterations: 6
+    metrics:
+      - name: job-errors
+        templateRef:
+          name: ngs-job-errors
+          namespace: ngs-bench
+        thresholdRange:
+          max: 0
+        interval: 1m

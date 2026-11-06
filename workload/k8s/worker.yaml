@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 600
       containers:
         - name: worker
-          image: ngs-worker:0.1.1
+          image: ngs-worker:0.2.1
           imagePullPolicy: IfNotPresent
           env:
             - name: NGS_REDIS_HOST
@@ -64,8 +64,10 @@ metadata:
     release: monitoring
 spec:
   selector:
-    matchLabels:
-      app: ngs-worker
+    matchExpressions:
+      - key: app
+        operator: In
+        values: [ngs-worker, ngs-worker-primary]
   podMetricsEndpoints:
     - port: metrics
       interval: 15s

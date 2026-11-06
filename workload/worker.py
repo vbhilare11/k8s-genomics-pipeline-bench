@@ -36,6 +36,13 @@ QUEUE_WAIT = Histogram("ngs_queue_wait_seconds", "Submit-to-start latency", buck
 BUSY = Gauge("ngs_worker_busy", "1 while a job is running")
 REDIS_ERRORS = Counter("ngs_redis_errors_total", "Redis connection errors")
 
+# Pre-create labelled series so a first event shows as 0->1 (increase()/rate()
+# cannot see a series that is born at its first increment).
+for _s in ("ok", "error"):
+    JOBS.labels(status=_s)
+for _st in ("fastp", "bwa"):
+    STEP_DURATION.labels(step=_st)
+
 _stop = False
 
 
