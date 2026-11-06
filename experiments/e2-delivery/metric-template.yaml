@@ -1,0 +1,14 @@
+# Job errors per minute attributed to the canary pods only (primary pods are
+# named <target>-primary-*). Returns 0 when there are no samples.
+apiVersion: flagger.app/v1beta1
+kind: MetricTemplate
+metadata:
+  name: ngs-job-errors
+  namespace: ngs-bench
+spec:
+  provider:
+    type: prometheus
+    address: http://monitoring-kube-prometheus-prometheus.monitoring.svc:9090
+  query: |
+    sum(increase(ngs_jobs_total{namespace="{{ namespace }}", status="error",
+        pod=~"{{ target }}-[^p][a-z0-9]*-[a-z0-9]+"}[1m])) or vector(0)
