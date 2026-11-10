@@ -1,0 +1,140 @@
+LAST SEEN   TYPE      REASON              OBJECT                                    MESSAGE
+11m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-2v2kf           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-2v2kf to niw-lab
+53m         Normal    Scheduled           pod/ngs-worker-primary-9fb766fb4-zgjkd    Successfully assigned ngs-bench/ngs-worker-primary-9fb766fb4-zgjkd to niw-lab
+10m         Normal    Scheduled           pod/ngs-worker-68b79f7489-jhvq7           Successfully assigned ngs-bench/ngs-worker-68b79f7489-jhvq7 to niw-lab
+51m         Normal    Scheduled           pod/ngs-worker-7756db95-bnpvj             Successfully assigned ngs-bench/ngs-worker-7756db95-bnpvj to niw-lab
+8m59s       Normal    Scheduled           pod/ngs-worker-68b79f7489-4pvsk           Successfully assigned ngs-bench/ngs-worker-68b79f7489-4pvsk to niw-lab
+53m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-78bjg           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-78bjg to niw-lab
+24m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-z6w8l           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-z6w8l to niw-lab
+53m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-vg8zv           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-vg8zv to niw-lab
+10m         Normal    Scheduled           pod/ngs-worker-648b9ff65f-ltc7l           Successfully assigned ngs-bench/ngs-worker-648b9ff65f-ltc7l to niw-lab
+22m         Normal    Scheduled           pod/ngs-worker-847d7ffbd5-lbzdf           Successfully assigned ngs-bench/ngs-worker-847d7ffbd5-lbzdf to niw-lab
+24m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-kzr4x           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-kzr4x to niw-lab
+51m         Normal    Scheduled           pod/ngs-worker-7756db95-2tpzl             Successfully assigned ngs-bench/ngs-worker-7756db95-2tpzl to niw-lab
+8m59s       Normal    Scheduled           pod/ngs-worker-68b79f7489-zw2fm           Successfully assigned ngs-bench/ngs-worker-68b79f7489-zw2fm to niw-lab
+9m59s       Normal    Scheduled           pod/ngs-worker-648b9ff65f-6p6xk           Successfully assigned ngs-bench/ngs-worker-648b9ff65f-6p6xk to niw-lab
+22m         Normal    Scheduled           pod/ngs-worker-847d7ffbd5-s5bdm           Successfully assigned ngs-bench/ngs-worker-847d7ffbd5-s5bdm to niw-lab
+11m         Normal    Scheduled           pod/ngs-worker-5b98f65cdf-snwqb           Successfully assigned ngs-bench/ngs-worker-5b98f65cdf-snwqb to niw-lab
+53m         Normal    Scheduled           pod/ngs-worker-primary-9fb766fb4-fw75t    Successfully assigned ngs-bench/ngs-worker-primary-9fb766fb4-fw75t to niw-lab
+53m         Normal    Killing             pod/ngs-worker-primary-7f57d9dd7d-xlsm5   Stopping container worker
+53m         Normal    Killing             pod/ngs-worker-primary-7f57d9dd7d-2wkr7   Stopping container worker
+53m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-78bjg
+53m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-vg8zv
+53m         Normal    Started             pod/ngs-worker-5b98f65cdf-78bjg           Container started
+53m         Normal    Created             pod/ngs-worker-5b98f65cdf-78bjg           Container created
+53m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-vg8zv           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+53m         Normal    Created             pod/ngs-worker-5b98f65cdf-vg8zv           Container created
+53m         Normal    Started             pod/ngs-worker-5b98f65cdf-vg8zv           Container started
+53m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-78bjg           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+53m         Normal    Pulled              pod/ngs-worker-primary-9fb766fb4-fw75t    Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+53m         Normal    SuccessfulCreate    replicaset/ngs-worker-primary-9fb766fb4   Created pod: ngs-worker-primary-9fb766fb4-zgjkd
+53m         Normal    SuccessfulCreate    replicaset/ngs-worker-primary-9fb766fb4   Created pod: ngs-worker-primary-9fb766fb4-fw75t
+53m         Normal    ScalingReplicaSet   deployment/ngs-worker-primary             Scaled up replica set ngs-worker-primary-9fb766fb4 from 0 to 2
+53m         Normal    Created             pod/ngs-worker-primary-9fb766fb4-fw75t    Container created
+53m         Normal    Started             pod/ngs-worker-primary-9fb766fb4-fw75t    Container started
+53m         Warning   Synced              canary/ngs-worker                         ngs-worker-primary.ngs-bench not ready: waiting for rollout to finish: observed deployment generation less than desired generation
+53m         Normal    Created             pod/ngs-worker-primary-9fb766fb4-zgjkd    Container created
+53m         Normal    Pulled              pod/ngs-worker-primary-9fb766fb4-zgjkd    Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+53m         Normal    Started             pod/ngs-worker-primary-9fb766fb4-zgjkd    Container started
+53m         Normal    Synced              canary/ngs-worker                         Initialization done! ngs-worker.ngs-bench
+53m         Normal    Synced              canary/ngs-worker                         all the metrics providers are available!
+53m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-5b98f65cdf from 2 to 0
+53m         Normal    Killing             pod/ngs-worker-5b98f65cdf-78bjg           Stopping container worker
+53m         Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-78bjg
+53m         Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-vg8zv
+53m         Normal    Killing             pod/ngs-worker-5b98f65cdf-vg8zv           Stopping container worker
+51m         Normal    Synced              canary/ngs-worker                         New revision detected! Scaling up ngs-worker.ngs-bench
+51m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-7756db95 from 0 to 2
+51m         Normal    SuccessfulCreate    replicaset/ngs-worker-7756db95            Created pod: ngs-worker-7756db95-bnpvj
+51m         Normal    Pulled              pod/ngs-worker-7756db95-bnpvj             Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+51m         Normal    Pulled              pod/ngs-worker-7756db95-2tpzl             Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+51m         Normal    Created             pod/ngs-worker-7756db95-2tpzl             Container created
+51m         Normal    Started             pod/ngs-worker-7756db95-2tpzl             Container started
+51m         Normal    SuccessfulCreate    replicaset/ngs-worker-7756db95            Created pod: ngs-worker-7756db95-2tpzl
+51m         Normal    Started             pod/ngs-worker-7756db95-bnpvj             Container started
+51m         Normal    Created             pod/ngs-worker-7756db95-bnpvj             Container created
+50m         Normal    Synced              canary/ngs-worker                         Starting canary analysis for ngs-worker.ngs-bench
+50m         Normal    Synced              canary/ngs-worker                         Advance ngs-worker.ngs-bench canary iteration 1/6
+50m         Normal    Synced              canary/ngs-worker                         Advance ngs-worker.ngs-bench canary iteration 2/6
+49m         Warning   Synced              canary/ngs-worker                         Halt ngs-worker.ngs-bench advancement job-errors 1.33 > 0
+48m         Warning   Synced              canary/ngs-worker                         Rolling back ngs-worker.ngs-bench failed checks threshold reached 2
+48m         Warning   Synced              canary/ngs-worker                         Canary failed! Scaling down ngs-worker.ngs-bench
+48m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-7756db95 from 2 to 0
+48m         Normal    Killing             pod/ngs-worker-7756db95-bnpvj             Stopping container worker
+48m         Normal    Killing             pod/ngs-worker-7756db95-2tpzl             Stopping container worker
+48m         Normal    SuccessfulDelete    replicaset/ngs-worker-7756db95            Deleted pod: ngs-worker-7756db95-bnpvj
+48m         Normal    SuccessfulDelete    replicaset/ngs-worker-7756db95            Deleted pod: ngs-worker-7756db95-2tpzl
+24m         Normal    Killing             pod/ngs-worker-primary-9fb766fb4-zgjkd    Stopping container worker
+24m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-kzr4x
+24m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-5b98f65cdf from 0 to 2
+24m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-z6w8l
+24m         Normal    Killing             pod/ngs-worker-primary-9fb766fb4-fw75t    Stopping container worker
+24m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-kzr4x           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+24m         Normal    Created             pod/ngs-worker-5b98f65cdf-kzr4x           Container created
+24m         Normal    Started             pod/ngs-worker-5b98f65cdf-kzr4x           Container started
+24m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-z6w8l           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+24m         Normal    Created             pod/ngs-worker-5b98f65cdf-z6w8l           Container created
+24m         Normal    Started             pod/ngs-worker-5b98f65cdf-z6w8l           Container started
+22m         Normal    SuccessfulCreate    replicaset/ngs-worker-847d7ffbd5          Created pod: ngs-worker-847d7ffbd5-lbzdf
+22m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-847d7ffbd5 from 0 to 1
+22m         Normal    Created             pod/ngs-worker-847d7ffbd5-lbzdf           Container created
+22m         Normal    Started             pod/ngs-worker-847d7ffbd5-lbzdf           Container started
+22m         Normal    SuccessfulCreate    replicaset/ngs-worker-847d7ffbd5          Created pod: ngs-worker-847d7ffbd5-s5bdm
+22m         Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-kzr4x
+22m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-847d7ffbd5 from 1 to 2
+22m         Normal    Killing             pod/ngs-worker-5b98f65cdf-kzr4x           Stopping container worker
+22m         Normal    Pulled              pod/ngs-worker-847d7ffbd5-lbzdf           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+22m         Normal    Started             pod/ngs-worker-847d7ffbd5-s5bdm           Container started
+22m         Normal    Pulled              pod/ngs-worker-847d7ffbd5-s5bdm           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+22m         Normal    Created             pod/ngs-worker-847d7ffbd5-s5bdm           Container created
+22m         Normal    Killing             pod/ngs-worker-5b98f65cdf-z6w8l           Stopping container worker
+22m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-5b98f65cdf from 1 to 0
+22m         Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-z6w8l
+11m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-snwqb           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+11m         Normal    Created             pod/ngs-worker-5b98f65cdf-snwqb           Container created
+11m         Normal    Started             pod/ngs-worker-5b98f65cdf-snwqb           Container started
+11m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-snwqb
+11m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-5b98f65cdf from 0 to 1
+11m         Normal    Created             pod/ngs-worker-5b98f65cdf-2v2kf           Container created
+11m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-5b98f65cdf from 1 to 2
+11m         Normal    Started             pod/ngs-worker-5b98f65cdf-2v2kf           Container started
+11m         Normal    Killing             pod/ngs-worker-847d7ffbd5-lbzdf           Stopping container worker
+11m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-847d7ffbd5 from 2 to 1
+11m         Normal    Pulled              pod/ngs-worker-5b98f65cdf-2v2kf           Container image "ngs-worker:0.2.1" already present on machine and can be accessed by the pod
+11m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-847d7ffbd5 from 1 to 0
+11m         Normal    Killing             pod/ngs-worker-847d7ffbd5-s5bdm           Stopping container worker
+11m         Normal    SuccessfulCreate    replicaset/ngs-worker-5b98f65cdf          Created pod: ngs-worker-5b98f65cdf-2v2kf
+11m         Normal    SuccessfulDelete    replicaset/ngs-worker-847d7ffbd5          Deleted pod: ngs-worker-847d7ffbd5-lbzdf
+11m         Normal    SuccessfulDelete    replicaset/ngs-worker-847d7ffbd5          Deleted pod: ngs-worker-847d7ffbd5-s5bdm
+10m         Normal    SuccessfulCreate    replicaset/ngs-worker-68b79f7489          Created pod: ngs-worker-68b79f7489-jhvq7
+10m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-68b79f7489 from 1 to 0
+10m         Normal    SuccessfulDelete    replicaset/ngs-worker-68b79f7489          Deleted pod: ngs-worker-68b79f7489-jhvq7
+10m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled down replica set ngs-worker-5b98f65cdf from 2 to 1
+10m         Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-2v2kf
+10m         Normal    SuccessfulCreate    replicaset/ngs-worker-648b9ff65f          Created pod: ngs-worker-648b9ff65f-6p6xk
+10m         Normal    SuccessfulCreate    replicaset/ngs-worker-648b9ff65f          Created pod: ngs-worker-648b9ff65f-ltc7l
+10m         Normal    Killing             pod/ngs-worker-5b98f65cdf-2v2kf           Stopping container worker
+10m         Normal    Pulled              pod/ngs-worker-648b9ff65f-ltc7l           Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+10m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-648b9ff65f from 1 to 2
+10m         Normal    Started             pod/ngs-worker-648b9ff65f-ltc7l           Container started
+10m         Normal    Created             pod/ngs-worker-648b9ff65f-ltc7l           Container created
+10m         Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-648b9ff65f from 0 to 1
+9m59s       Normal    SuccessfulDelete    replicaset/ngs-worker-5b98f65cdf          Deleted pod: ngs-worker-5b98f65cdf-snwqb
+9m59s       Normal    Created             pod/ngs-worker-648b9ff65f-6p6xk           Container created
+9m59s       Normal    Killing             pod/ngs-worker-5b98f65cdf-snwqb           Stopping container worker
+9m59s       Normal    Started             pod/ngs-worker-648b9ff65f-6p6xk           Container started
+9m59s       Normal    Pulled              pod/ngs-worker-648b9ff65f-6p6xk           Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+9m          Normal    SuccessfulCreate    replicaset/ngs-worker-68b79f7489          Created pod: ngs-worker-68b79f7489-4pvsk
+9m          Normal    ScalingReplicaSet   deployment/ngs-worker                     Scaled up replica set ngs-worker-68b79f7489 from 0 to 1
+8m59s       Normal    Started             pod/ngs-worker-68b79f7489-4pvsk           Container started
+8m59s       Normal    Killing             pod/ngs-worker-648b9ff65f-6p6xk           Stopping container worker
+8m59s       Normal    Killing             pod/ngs-worker-648b9ff65f-ltc7l           Stopping container worker
+8m59s       Normal    Created             pod/ngs-worker-68b79f7489-zw2fm           Container created
+8m59s       Normal    Pulled              pod/ngs-worker-68b79f7489-zw2fm           Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+8m59s       Normal    SuccessfulCreate    replicaset/ngs-worker-68b79f7489          Created pod: ngs-worker-68b79f7489-zw2fm
+8m59s       Normal    Created             pod/ngs-worker-68b79f7489-4pvsk           Container created
+8m59s       Normal    Started             pod/ngs-worker-68b79f7489-zw2fm           Container started
+8m59s       Normal    Pulled              pod/ngs-worker-68b79f7489-4pvsk           Container image "ngs-worker:0.2.1-broken" already present on machine and can be accessed by the pod
+8m59s       Normal    SuccessfulDelete    replicaset/ngs-worker-648b9ff65f          Deleted pod: ngs-worker-648b9ff65f-ltc7l
+8m59s       Normal    SuccessfulDelete    replicaset/ngs-worker-648b9ff65f          Deleted pod: ngs-worker-648b9ff65f-6p6xk
+8m59s       Normal    ScalingReplicaSet   deployment/ngs-worker                     (combined from similar events): Scaled down replica set ngs-worker-648b9ff65f from 1 to 0

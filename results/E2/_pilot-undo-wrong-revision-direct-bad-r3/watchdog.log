@@ -1,0 +1,5 @@
+[watchdog] errors/min=2.207666666666667 failed_checks=1
+[watchdog] errors/min=2.5122666666666666 failed_checks=2
+Warning: resource deployments/ngs-worker was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.
+deployment.apps/ngs-worker rolled back
+[watchdog] rollout undo issued

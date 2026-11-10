@@ -27,6 +27,7 @@ mkdir -p "${OUT}"
 log() { printf '[%s] %s\n' "$(date -u +%H:%M:%S)" "$*"; }
 rcli() { kubectl -n "${NS}" exec deploy/redis -- redis-cli "$@"; }
 ready() { local r; r=$(kubectl -n "${NS}" get deploy "$1" -o jsonpath='{.status.readyReplicas}' 2>/dev/null); echo "${r:-0}"; }
+updated() { local r; r=$(kubectl -n "${NS}" get deploy "$1" -o jsonpath='{.status.updatedReplicas}' 2>/dev/null); echo "${r:-0}"; }
 exists() { kubectl -n "${NS}" get "$1" "$2" >/dev/null 2>&1 && echo present || echo absent; }
 live_image() {  # image of the deployment currently serving (primary under Flagger)
   if [[ "$(exists deploy ngs-worker-primary)" == present ]]; then
@@ -60,8 +61,7 @@ reset_plain_deployment() {
   kubectl -n "${NS}" delete deploy ngs-worker-primary --ignore-not-found >/dev/null
   kubectl -n "${NS}" delete svc ngs-worker ngs-worker-primary ngs-worker-canary --ignore-not-found >/dev/null
   wait_until 120 is_absent deploy ngs-worker-primary
-  kubectl -n "${NS}" set image deploy/ngs-worker "worker=${GOOD_IMAGE}" >/dev/null
-  kubectl -n "${NS}" patch deploy ngs-worker -p '{"spec":{"template":{"metadata":{"annotations":{"release":"baseline"}}}}}' >/dev/null
+  kubectl -n "${NS}" patch deploy ngs-worker -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"release\":\"baseline\"}},\"spec\":{\"containers\":[{\"name\":\"worker\",\"image\":\"${GOOD_IMAGE}\"}]}}}}" >/dev/null
   kubectl -n "${NS}" set resources deploy/ngs-worker -c worker --requests="cpu=${CPU_REQUEST},memory=768Mi" >/dev/null
   kubectl -n "${NS}" scale deploy ngs-worker --replicas="${REPLICAS}" >/dev/null
   kubectl -n "${NS}" rollout status deploy/ngs-worker --timeout=180s >/dev/null
@@ -82,17 +82,19 @@ configure() {
 do_release() {
   local img="${GOOD_IMAGE}"
   [[ "${RELEASE}" == "bad" ]] && img="${BAD_IMAGE}"
-  kubectl -n "${NS}" set image deploy/ngs-worker "worker=${img}" >/dev/null
-  kubectl -n "${NS}" patch deploy ngs-worker -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"release\":\"${EXP}-${MODE}-${RELEASE}-r${REP}\"}}}}}" >/dev/null
+  # One patch = one Deployment revision; a two-step release would leave an
+  # intermediate (still-broken) revision for `rollout undo` to land on.
+  kubectl -n "${NS}" patch deploy ngs-worker -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"release\":\"${EXP}-${MODE}-${RELEASE}-r${REP}\"}},\"spec\":{\"containers\":[{\"name\":\"worker\",\"image\":\"${img}\"}]}}}}" >/dev/null
   date +%s.%N > "${OUT}/t_release"
   log "released ${RELEASE} (${img}) via ${MODE}"
 }
 
 poller() {
-  echo "ts,queue_len,live_image,ready_primary,ready_target,canary_phase" > "${OUT}/timeline.csv"
+  echo "ts,queue_len,live_image,ready_primary,ready_target,canary_phase,updated_target" > "${OUT}/timeline.csv"
   while true; do
-    printf '%s,%s,%s,%s,%s,%s\n' "$(date +%s)" "$(rcli LLEN ngs:jobs | tr -d '[:space:]')" \
-      "$(live_image)" "$(ready ngs-worker-primary)" "$(ready ngs-worker)" "$(canary_phase)" >> "${OUT}/timeline.csv"
+    printf '%s,%s,%s,%s,%s,%s,%s\n' "$(date +%s)" "$(rcli LLEN ngs:jobs | tr -d '[:space:]')" \
+      "$(live_image)" "$(ready ngs-worker-primary)" "$(ready ngs-worker)" "$(canary_phase)" \
+      "$(updated ngs-worker)" >> "${OUT}/timeline.csv"
     sleep "${POLL}"
   done
 }
