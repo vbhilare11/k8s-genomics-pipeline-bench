@@ -1,0 +1,67 @@
+[19:01:32] E2 mode=direct release=good rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r1
+[19:01:32] removing existing Canary and Flagger-managed objects
+[19:03:24] released good (ngs-worker:0.2.1) via direct
+[19:11:54] load stopped; draining
+[19:13:25] done: 24 ok, 0 failed
+[19:13:55] E2 mode=direct release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r1
+[19:15:48] released bad (ngs-worker:0.2.1-broken) via direct
+[19:24:19] load stopped; draining
+[19:25:49] done: 6 ok, 28 failed
+[19:26:19] E2 mode=canary release=good rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-good-r1
+[19:26:21] waiting for Flagger initialisation (phase: Initializing)
+[19:27:03] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[19:28:53] released good (ngs-worker:0.2.1) via canary
+[19:37:23] load stopped; draining
+[19:38:54] done: 28 ok, 0 failed
+[19:39:24] E2 mode=canary release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-bad-r1
+[19:39:24] removing existing Canary and Flagger-managed objects
+[19:39:26] waiting for Flagger initialisation (phase: Initializing)
+[19:40:03] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[19:41:53] released bad (ngs-worker:0.2.1-broken) via canary
+[19:50:23] load stopped; draining
+[19:51:53] done: 22 ok, 5 failed
+[19:52:23] E2 mode=direct release=good rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r2
+[19:52:24] removing existing Canary and Flagger-managed objects
+[19:54:16] released good (ngs-worker:0.2.1) via direct
+[20:02:46] load stopped; draining
+[20:04:17] done: 26 ok, 0 failed
+[20:04:47] E2 mode=direct release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r2
+[20:06:41] released bad (ngs-worker:0.2.1-broken) via direct
+[20:15:11] load stopped; draining
+[20:16:41] done: 6 ok, 28 failed
+[20:17:11] E2 mode=canary release=good rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-good-r2
+[20:17:13] waiting for Flagger initialisation (phase: Initializing)
+[20:17:50] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[20:19:40] released good (ngs-worker:0.2.1) via canary
+[20:28:10] load stopped; draining
+[20:29:41] done: 28 ok, 0 failed
+[20:30:11] E2 mode=canary release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-bad-r2
+[20:30:11] removing existing Canary and Flagger-managed objects
+[20:30:14] waiting for Flagger initialisation (phase: Initializing)
+[20:30:50] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[20:32:40] released bad (ngs-worker:0.2.1-broken) via canary
+[20:41:10] load stopped; draining
+[20:42:41] done: 22 ok, 5 failed
+[20:43:11] E2 mode=direct release=good rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r3
+[20:43:11] removing existing Canary and Flagger-managed objects
+[20:45:04] released good (ngs-worker:0.2.1) via direct
+[20:53:34] load stopped; draining
+[20:55:04] done: 26 ok, 0 failed
+[20:55:34] E2 mode=direct release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r3
+[20:57:28] released bad (ngs-worker:0.2.1-broken) via direct
+[21:05:58] load stopped; draining
+[21:07:28] done: 6 ok, 28 failed
+[21:07:58] E2 mode=canary release=good rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-good-r3
+[21:08:01] waiting for Flagger initialisation (phase: Initializing)
+[21:08:42] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[21:10:32] released good (ngs-worker:0.2.1) via canary
+[21:19:02] load stopped; draining
+[21:20:33] done: 28 ok, 0 failed
+[21:21:03] E2 mode=canary release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/canary-bad-r3
+[21:21:03] removing existing Canary and Flagger-managed objects
+[21:21:06] waiting for Flagger initialisation (phase: Initializing)
+[21:21:42] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.1
+[21:23:33] released bad (ngs-worker:0.2.1-broken) via canary
+[21:32:03] load stopped; draining
+[21:33:33] done: 22 ok, 5 failed
+campaign complete

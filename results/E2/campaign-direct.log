@@ -1,0 +1,26 @@
+[00:27:56] E2 mode=direct release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r1
+[00:27:57] removing existing Canary and Flagger-managed objects
+[00:29:49] released bad (ngs-worker:0.2.1-broken) via direct
+[00:38:19] load stopped; draining
+[00:39:49] done: 22 ok, 4 failed
+[00:40:19] E2 mode=direct release=good rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r1
+[00:42:11] released good (ngs-worker:0.2.1) via direct
+[00:50:41] load stopped; draining
+[00:52:11] done: 26 ok, 0 failed
+[00:52:41] E2 mode=direct release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r2
+[00:54:35] released bad (ngs-worker:0.2.1-broken) via direct
+[01:03:05] load stopped; draining
+[01:04:35] done: 26 ok, 5 failed
+[01:05:05] E2 mode=direct release=good rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r2
+[01:06:57] released good (ngs-worker:0.2.1) via direct
+[01:15:27] load stopped; draining
+[01:16:57] done: 26 ok, 0 failed
+[01:17:27] E2 mode=direct release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-bad-r3
+[01:19:20] released bad (ngs-worker:0.2.1-broken) via direct
+[01:27:50] load stopped; draining
+[01:29:21] done: 24 ok, 6 failed
+[01:29:51] E2 mode=direct release=good rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2/direct-good-r3
+[01:31:43] released good (ngs-worker:0.2.1) via direct
+[01:40:13] load stopped; draining
+[01:41:43] done: 26 ok, 0 failed
+campaign complete

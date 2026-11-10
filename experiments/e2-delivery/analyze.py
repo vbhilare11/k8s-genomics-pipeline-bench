@@ -39,7 +39,8 @@ def analyse(meta, res, tl):
             row["recovery_s"] = round(meta["t_undo"] - t0, 1)
         if meta["release"] == "good":
             # rollout complete when the live image equals the good image and target ready == replicas
-            done = next((float(x["ts"]) for x in tl if float(x["ts"]) > t0
+            done = next((float(x["ts"]) for x in tl if float(x["ts"]) > t0 + 5
+                         and int(x.get("updated_target") or 0) >= meta["replicas"]
                          and int(x["ready_target"] or 0) >= meta["replicas"]), None)
             row["promotion_s"] = round(done - t0, 1) if done else ""
     else:
