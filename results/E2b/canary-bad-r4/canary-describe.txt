@@ -1,0 +1,61 @@
+Name:         ngs-worker
+Namespace:    ngs-bench
+Labels:       <none>
+Annotations:  <none>
+API Version:  flagger.app/v1beta1
+Kind:         Canary
+Metadata:
+  Creation Timestamp:  2026-11-11T15:33:58Z
+  Generation:          1
+  Resource Version:    690522
+  UID:                 dda2c033-6054-4348-a04b-3b47ace9acec
+Spec:
+  Analysis:
+    Interval:    30s
+    Iterations:  6
+    Metrics:
+      Interval:  1m
+      Name:      job-errors
+      Template Ref:
+        Name:       ngs-job-errors
+        Namespace:  ngs-bench
+      Threshold Range:
+        Max:                  0
+    Threshold:                2
+  Progress Deadline Seconds:  600
+  Provider:                   kubernetes
+  Service:
+    Port:  9100
+  Target Ref:
+    API Version:  apps/v1
+    Kind:         Deployment
+    Name:         ngs-worker
+Status:
+  Canary Weight:  0
+  Conditions:
+    Last Transition Time:  2026-11-11T15:39:08Z
+    Last Update Time:      2026-11-11T15:39:08Z
+    Message:               Canary analysis failed, Deployment scaled to zero.
+    Reason:                Failed
+    Status:                False
+    Type:                  Promoted
+  Failed Checks:           0
+  Iterations:              0
+  Last Applied Spec:       c5686645f
+  Last Promoted Spec:      766446f964
+  Last Transition Time:    2026-11-11T15:46:07Z
+  Phase:                   Failed
+  Tracked Configs:
+Events:
+  Type     Reason  Age                    From     Message
+  ----     ------  ----                   ----     -------
+  Warning  Synced  12m                    flagger  ngs-worker-primary.ngs-bench not ready: waiting for rollout to finish: observed deployment generation less than desired generation
+  Normal   Synced  11m (x2 over 12m)      flagger  all the metrics providers are available!
+  Normal   Synced  11m                    flagger  Initialization done! ngs-worker.ngs-bench
+  Normal   Synced  9m54s                  flagger  New revision detected! Scaling up ngs-worker.ngs-bench
+  Normal   Synced  9m23s                  flagger  Starting canary analysis for ngs-worker.ngs-bench
+  Normal   Synced  9m23s                  flagger  Advance ngs-worker.ngs-bench canary iteration 1/6
+  Normal   Synced  8m53s                  flagger  Advance ngs-worker.ngs-bench canary iteration 2/6
+  Warning  Synced  7m54s (x2 over 8m24s)  flagger  Halt ngs-worker.ngs-bench advancement job-errors 1.27 > 0
+  Warning  Synced  7m23s                  flagger  Rolling back ngs-worker.ngs-bench failed checks threshold reached 2
+  Warning  Synced  7m23s                  flagger  Canary failed! Scaling down ngs-worker.ngs-bench

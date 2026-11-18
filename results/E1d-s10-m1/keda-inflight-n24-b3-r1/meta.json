@@ -1,0 +1,4 @@
+{"experiment":"E1d-s10-m1","mode":"keda-inflight","jobs":24,"bursts":3,"gap_s":240,"replicate":1,
+ "cooldown_s":60,"min_replicas":1,"startup_delay_s":10,
+ "git_sha":"9b2c98dd89e5a7556a2d00fc0b657bc2277a9843","start_ts":1794347541.336035549,"end_ts":1794348206.140256812,
+ "makespan_s":664.8,"completed":24}

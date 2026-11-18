@@ -1,0 +1,9 @@
+mode,release,replicate,jobs_total,jobs_ok,jobs_failed,first_fail_s,last_fail_s,exposure_s,recovery_s,promotion_s,git_sha
+canary-abs,bad,1,22,20,2,13.4,34.1,20.7,129.3,,9b2c98dd89
+canary-abs,bad,2,22,20,2,13.3,99.1,85.8,128.0,,9b2c98dd89
+canary-abs,bad,3,34,28,6,338.7,504.8,166.2,,,9b2c98dd89
+canary-abs,bad,4,24,23,1,185.4,185.4,0.0,278.3,,9b2c98dd89
+canary-abs,bad,5,26,25,1,88.9,88.9,0.0,159.6,,9b2c98dd89
+canary-abs,bad,6,29,26,3,89.0,186.9,97.9,187.8,,9b2c98dd89
+canary-abs,bad,7,30,28,2,171.3,188.8,17.5,244.1,,9b2c98dd89
+canary-abs,bad,8,26,25,1,14.5,14.5,0.0,127.1,,9b2c98dd89

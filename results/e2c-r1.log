@@ -1,0 +1,6 @@
+[21:56:19] E2c mode=canary-abs release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r1
+[21:56:21] waiting for Flagger initialisation (phase: Initializing)
+[21:57:03] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[21:58:53] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[22:07:23] load stopped; draining
+[22:08:54] done: 20 ok, 2 failed

@@ -1,0 +1,18 @@
+# Absolute error count on the canary pods (not a rate). Canary pods are created
+# at release time, so their counter is exactly "errors since this release
+# started" -- no window, no dependence on when Prometheus first scraped them.
+# This closes the E2b r7 gap, where the canary's first job failed before the
+# first scrape, the series was born at 1, and increase() saw no change.
+# Not valid for long-lived pods, whose counters carry historical errors.
+apiVersion: flagger.app/v1beta1
+kind: MetricTemplate
+metadata:
+  name: ngs-job-errors-abs
+  namespace: ngs-bench
+spec:
+  provider:
+    type: prometheus
+    address: http://monitoring-kube-prometheus-prometheus.monitoring.svc:9090
+  query: |
+    sum(ngs_jobs_total{namespace="{{ namespace }}", status="error",
+        pod=~"{{ target }}-[^p][a-z0-9]*-[a-z0-9]+"}) or vector(0)

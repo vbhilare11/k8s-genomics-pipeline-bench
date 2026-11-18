@@ -1,0 +1,217 @@
+[19:44:49] E1d-s0-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s0-m0/keda-inflight-n24-b3-r1
+[19:44:49] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[19:45:20] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[19:49:20] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 6
+[19:53:21] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 6
+[20:47:22] timeout: 23/24 done
+[20:47:23] done: 23/24 jobs, makespan 3722.6s
+[20:48:23] E1d-s0-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s0-m0/keda-inflight-n24-b3-r2
+[20:48:23] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[20:48:54] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[20:52:54] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[20:56:55] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[20:59:59] done: 24/24 jobs, makespan 664.8s
+campaign complete
+[21:00:59] E1d-s0-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s0-m1/keda-inflight-n24-b3-r1
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[21:01:00] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[21:01:35] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:05:36] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:09:36] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:12:36] done: 24/24 jobs, makespan 660.4s
+[21:13:36] E1d-s0-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s0-m1/keda-inflight-n24-b3-r2
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[21:13:36] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[21:14:12] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:18:12] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:22:13] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:25:17] done: 24/24 jobs, makespan 665.2s
+campaign complete
+[21:26:17] E1d-s10-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s10-m0/keda-inflight-n24-b3-r1
+[21:26:18] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[21:26:54] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[21:30:54] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:34:55] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[21:38:03] done: 24/24 jobs, makespan 669.2s
+[21:39:03] E1d-s10-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s10-m0/keda-inflight-n24-b3-r2
+[21:39:04] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[21:39:34] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[21:43:35] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:47:35] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:50:45] done: 24/24 jobs, makespan 670.1s
+campaign complete
+[21:51:45] E1d-s10-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s10-m1/keda-inflight-n24-b3-r1
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[21:51:45] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[21:52:21] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[21:56:21] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:00:22] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:03:26] done: 24/24 jobs, makespan 664.8s
+[22:04:26] E1d-s10-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s10-m1/keda-inflight-n24-b3-r2
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[22:04:27] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[22:05:02] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:09:03] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:13:03] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:16:13] done: 24/24 jobs, makespan 670.5s
+campaign complete
+[22:17:13] E1d-s30-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s30-m0/keda-inflight-n24-b3-r1
+[22:17:14] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[22:17:44] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[22:21:45] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 6
+[22:25:45] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:29:19] done: 24/24 jobs, makespan 694.9s
+[22:30:19] E1d-s30-m0 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s30-m0/keda-inflight-n24-b3-r2
+[22:30:20] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[22:30:51] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[22:34:51] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:38:52] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:42:33] done: 24/24 jobs, makespan 702.3s
+campaign complete
+[22:43:33] E1d-s30-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-s30-m1/keda-inflight-n24-b3-r1
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[22:43:34] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[22:44:10] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:48:10] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:52:10] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[22:55:30] done: 24/24 jobs, makespan 680.2s
+[22:56:30] E1d-s30-m1 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-s30-m1/keda-inflight-n24-b3-r2
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[22:56:31] waiting for KEDA (in-flight aware) to settle at 1 (cooldown 60s)
+[22:57:06] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:01:07] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:05:07] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:08:38] done: 24/24 jobs, makespan 691.5s
+campaign complete
+[23:09:38] E1d-cd60 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd60/keda-inflight-n24-b3-r1
+[23:09:39] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[23:10:09] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[23:14:10] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:18:10] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:21:09] done: 24/24 jobs, makespan 659.6s
+[23:22:09] E1d-cd60 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd60/keda-inflight-n24-b3-r2
+[23:22:10] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[23:22:40] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[23:26:41] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:30:41] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[23:33:46] done: 24/24 jobs, makespan 665.6s
+campaign complete
+[23:34:46] E1d-cd180 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd180/keda-inflight-n24-b3-r1
+[23:34:47] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 180s)
+[23:35:17] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[23:39:18] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:43:18] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:46:06] done: 24/24 jobs, makespan 649.0s
+[23:47:06] E1d-cd180 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd180/keda-inflight-n24-b3-r2
+[23:47:07] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 180s)
+[23:47:38] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[23:51:38] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:55:38] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[23:58:43] done: 24/24 jobs, makespan 665.3s
+campaign complete
+[23:59:43] E1d-cd300 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd300/keda-inflight-n24-b3-r1
+[23:59:44] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 300s)
+[00:00:14] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[00:04:15] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[00:08:15] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[00:11:14] done: 24/24 jobs, makespan 659.3s
+[00:12:14] E1d-cd300 mode=keda-inflight jobs=24 bursts=3 gap=240s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-cd300/keda-inflight-n24-b3-r2
+[00:12:14] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 300s)
+[00:12:45] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[00:16:45] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[00:20:46] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 7
+[00:23:50] done: 24/24 jobs, makespan 665.2s
+campaign complete
+[00:24:50] E2b mode=direct release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2b/direct-bad-r1
+[00:26:43] released bad (ngs-worker:0.2.2-flaky30) via direct
+[00:35:13] load stopped; draining
+[00:36:43] done: 25 ok, 2 failed
+[00:37:13] E2b mode=canary release=bad rep=1 -> /root/k8s-genomics-pipeline-bench/results/E2b/canary-bad-r1
+[00:37:15] waiting for Flagger initialisation (phase: Initializing)
+[00:37:51] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[00:39:41] released bad (ngs-worker:0.2.2-flaky30) via canary
+[00:48:11] load stopped; draining
+[00:49:42] done: 27 ok, 2 failed
+[00:50:12] E2b mode=direct release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2b/direct-bad-r2
+[00:50:12] removing existing Canary and Flagger-managed objects
+[00:52:04] released bad (ngs-worker:0.2.2-flaky30) via direct
+[01:00:34] load stopped; draining
+[01:02:05] done: 29 ok, 2 failed
+[01:02:35] E2b mode=canary release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2b/canary-bad-r2
+[01:02:36] waiting for Flagger initialisation (phase: Initializing)
+[01:03:13] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[01:05:03] released bad (ngs-worker:0.2.2-flaky30) via canary
+[01:13:33] load stopped; draining
+[01:15:03] done: 25 ok, 2 failed
+[01:15:33] E2b mode=direct release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2b/direct-bad-r3
+[01:15:34] removing existing Canary and Flagger-managed objects
+[01:17:26] released bad (ngs-worker:0.2.2-flaky30) via direct
+[01:25:56] load stopped; draining
+[01:27:27] done: 25 ok, 4 failed
+[01:27:57] E2b mode=canary release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2b/canary-bad-r3
+[01:27:58] waiting for Flagger initialisation (phase: Initializing)
+[01:28:40] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[01:30:30] released bad (ngs-worker:0.2.2-flaky30) via canary
+[01:39:00] load stopped; draining
+[01:40:31] done: 24 ok, 2 failed
+campaign complete
