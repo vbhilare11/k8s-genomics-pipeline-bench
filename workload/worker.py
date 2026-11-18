@@ -7,6 +7,7 @@ metrics on :9100. One job at a time per process; parallelism comes from replicas
 """
 import json
 import os
+import random
 import shutil
 import signal
 import socket
@@ -26,6 +27,8 @@ WORK_DIR = os.getenv("WORK_DIR", "/tmp/work")
 THREADS = int(os.getenv("THREADS", "1"))
 STEPS = [s for s in os.getenv("PIPELINE_STEPS", "fastp,bwa").split(",") if s]
 METRICS_PORT = int(os.getenv("METRICS_PORT", "9100"))
+STARTUP_DELAY = float(os.getenv("STARTUP_DELAY", "0"))   # simulated cold start (s)
+FAIL_RATE = float(os.getenv("FAIL_RATE", "0"))           # injected partial fault (0..1)
 WORKER = socket.gethostname()
 
 BUCKETS = (5, 10, 15, 20, 30, 45, 60, 90, 120, 180, 300, 600)
@@ -112,7 +115,10 @@ def main():
     signal.signal(signal.SIGTERM, _handle_stop)
     signal.signal(signal.SIGINT, _handle_stop)
     start_http_server(METRICS_PORT)
-    print(f"[{WORKER}] starting: queue={JOB_QUEUE} steps={STEPS} threads={THREADS}", flush=True)
+    print(f"[{WORKER}] starting: queue={JOB_QUEUE} steps={STEPS} threads={THREADS} "
+          f"startup_delay={STARTUP_DELAY}s fail_rate={FAIL_RATE}", flush=True)
+    if STARTUP_DELAY > 0:
+        time.sleep(STARTUP_DELAY)
     r = connect()
 
     while not _stop and r is not None:
@@ -135,6 +141,8 @@ def main():
         status = "ok"
         timings, aligned, err = {}, None, None
         try:
+            if FAIL_RATE > 0 and random.random() < FAIL_RATE:
+                raise RuntimeError("injected fault (FAIL_RATE)")
             timings, aligned = process(job)
         except Exception as exc:  # noqa: BLE001 - record and continue
             status = "error"

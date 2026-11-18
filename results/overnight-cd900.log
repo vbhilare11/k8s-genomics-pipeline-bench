@@ -1,0 +1,2 @@
+[00:50:36] E1d-g900-cd60 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd60/keda-inflight-n24-b3-r1
+[00:50:36] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)

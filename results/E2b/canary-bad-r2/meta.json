@@ -1,0 +1,4 @@
+{"experiment":"E2b","mode":"canary","release":"bad","replicate":2,
+ "replicas":2,"cpu_request":"500m","load_interval_s":20,"pre_s":90,"duration_s":600,
+ "good_image":"ngs-worker:0.2.2","bad_image":"ngs-worker:0.2.2-flaky30","git_sha":"9b2c98dd89e5a7556a2d00fc0b657bc2277a9843",
+ "start_ts":1794359013.198003733,"t_release":1794359103.334723480,"t_undo":null,"end_ts":1794359703.355692040}

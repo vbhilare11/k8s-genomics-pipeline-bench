@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # E2 progressive-delivery experiment: one run.
-# Usage: ./run.sh <direct|canary> <good|bad> [replicate=1]
-# Env: EXP=E2 REPLICAS=2 LOAD_INTERVAL=30 PRE=90 DURATION=600 NS=ngs-bench POLL=5
-#      GOOD_IMAGE=ngs-worker:0.2.1 BAD_IMAGE=ngs-worker:0.2.1-broken
+# Usage: ./run.sh <direct|canary|canary-abs> <good|bad> [replicate=1]
+#   canary     : Flagger, error metric = increase(errors[1m])   (metric-template.yaml)
+#   canary-abs : Flagger, error metric = absolute error count    (metric-template-abs.yaml)
+# Env: EXP=E2 REPLICAS=2 LOAD_INTERVAL=20 PRE=90 DURATION=600 NS=ngs-bench POLL=5
+#      GOOD_IMAGE=ngs-worker:0.2.2 BAD_IMAGE=ngs-worker:0.2.2-broken
 set -euo pipefail
 
-MODE="${1:?mode: direct|canary}"
+MODE="${1:?mode: direct|canary|canary-abs}"
 RELEASE="${2:?release: good|bad}"
 REP="${3:-1}"
 EXP="${EXP:-E2}"
@@ -15,9 +17,11 @@ PRE="${PRE:-90}"
 DURATION="${DURATION:-600}"
 NS="${NS:-ngs-bench}"
 POLL="${POLL:-5}"
-GOOD_IMAGE="${GOOD_IMAGE:-ngs-worker:0.2.1}"
-BAD_IMAGE="${BAD_IMAGE:-ngs-worker:0.2.1-broken}"
+GOOD_IMAGE="${GOOD_IMAGE:-ngs-worker:0.2.2}"
+BAD_IMAGE="${BAD_IMAGE:-ngs-worker:0.2.2-broken}"
 CPU_REQUEST="${CPU_REQUEST:-500m}"   # 2 primary + 2 canary pods must fit on a 4 vCPU node
+
+case "${MODE}" in direct|canary|canary-abs) ;; *) echo "unknown mode: ${MODE}" >&2; exit 2 ;; esac
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "${HERE}/../.." && pwd)"
@@ -70,8 +74,12 @@ reset_plain_deployment() {
 
 configure() {
   reset_plain_deployment
-  if [[ "${MODE}" == "canary" ]]; then
-    kubectl apply -f "${HERE}/metric-template.yaml" -f "${HERE}/canary.yaml" >/dev/null
+  if [[ "${MODE}" == canary* ]]; then
+    if [[ "${MODE}" == "canary-abs" ]]; then
+      kubectl apply -f "${HERE}/metric-template-abs.yaml" -f "${HERE}/canary-abs.yaml" >/dev/null
+    else
+      kubectl apply -f "${HERE}/metric-template.yaml" -f "${HERE}/canary.yaml" >/dev/null
+    fi
     log "waiting for Flagger initialisation (phase: $(canary_phase))"
     wait_until 480 canary_settled
     wait_until 180 is_ready ngs-worker-primary "${REPLICAS}"

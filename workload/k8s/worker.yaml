@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 600
       containers:
         - name: worker
-          image: ngs-worker:0.2.1
+          image: ngs-worker:0.2.2
           imagePullPolicy: IfNotPresent
           env:
             - name: NGS_REDIS_HOST

@@ -16,7 +16,8 @@ COPY worker.py prepare-data.sh /app/
 RUN chmod +x /app/prepare-data.sh && mkdir -p /tmp/work && chown 65532:65532 /tmp/work
 
 ARG DATA_DIR=/data
-ENV DATA_DIR=${DATA_DIR}
+ARG FAIL_RATE=0
+ENV DATA_DIR=${DATA_DIR} FAIL_RATE=${FAIL_RATE}
 USER 65532:65532
 ENV PYTHONUNBUFFERED=1
 ENTRYPOINT ["python3", "/app/worker.py"]

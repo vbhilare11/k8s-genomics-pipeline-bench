@@ -1,0 +1,114 @@
+[01:33:09] E2c mode=canary-abs release=bad rep=2 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r2
+[01:33:09] removing existing Canary and Flagger-managed objects
+[01:33:12] waiting for Flagger initialisation (phase: Initializing)
+[01:33:59] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[01:35:50] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[01:44:20] load stopped; draining
+[01:45:50] done: 20 ok, 2 failed
+[01:45:50] E2c mode=canary-abs release=bad rep=3 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r3
+[01:45:51] removing existing Canary and Flagger-managed objects
+[01:45:55] waiting for Flagger initialisation (phase: Initializing)
+[01:46:34] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[01:48:25] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[01:56:55] load stopped; draining
+[01:58:26] done: 28 ok, 6 failed
+[01:58:26] E2c mode=canary-abs release=bad rep=4 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r4
+[01:58:26] removing existing Canary and Flagger-managed objects
+[01:58:29] waiting for Flagger initialisation (phase: Initializing)
+[01:59:11] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[02:01:01] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[02:09:31] load stopped; draining
+[02:11:02] done: 23 ok, 1 failed
+[02:11:02] E2c mode=canary-abs release=bad rep=5 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r5
+[02:11:03] removing existing Canary and Flagger-managed objects
+[02:11:07] waiting for Flagger initialisation (phase: Initializing)
+[02:11:42] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[02:13:33] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[02:22:03] load stopped; draining
+[02:23:33] done: 25 ok, 1 failed
+[02:23:33] E2c mode=canary-abs release=bad rep=6 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r6
+[02:23:34] removing existing Canary and Flagger-managed objects
+[02:23:38] waiting for Flagger initialisation (phase: Initializing)
+[02:24:12] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[02:26:03] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[02:34:33] load stopped; draining
+[02:36:03] done: 26 ok, 3 failed
+[02:36:03] E2c mode=canary-abs release=bad rep=7 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r7
+[02:36:04] removing existing Canary and Flagger-managed objects
+[02:36:08] waiting for Flagger initialisation (phase: Initializing)
+[02:36:42] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[02:38:33] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[02:47:03] load stopped; draining
+[02:48:34] done: 28 ok, 2 failed
+[02:48:34] E2c mode=canary-abs release=bad rep=8 -> /root/k8s-genomics-pipeline-bench/results/E2c/canary-abs-bad-r8
+[02:48:34] removing existing Canary and Flagger-managed objects
+[02:48:38] waiting for Flagger initialisation (phase: Initializing)
+[02:49:22] Flagger ready (phase: Initialized), primary=2 live=ngs-worker:0.2.2
+[02:51:12] released bad (ngs-worker:0.2.2-flaky30) via canary-abs
+[02:59:42] load stopped; draining
+[03:01:13] done: 25 ok, 1 failed
+E2C DONE
+[03:01:13] E1d-g900-cd60 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd60/keda-inflight-n24-b3-r1
+[03:01:16] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[03:05:30] image=ngs-worker:0.2.2 cpu_request=1
+[03:05:30] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[03:20:31] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[03:35:32] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[03:39:29] done: 24/24 jobs, 0 errors, makespan 2039.0s
+[03:40:29] E1d-g900-cd60 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd60/keda-inflight-n24-b3-r2
+[03:40:31] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 60s)
+[03:41:02] image=ngs-worker:0.2.2 cpu_request=1
+[03:41:02] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[03:56:02] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[04:11:03] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[04:15:03] done: 24/24 jobs, 0 errors, makespan 2040.7s
+campaign complete
+[04:16:03] E1d-g900-cd180 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd180/keda-inflight-n24-b3-r1
+[04:16:04] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 180s)
+[04:16:35] image=ngs-worker:0.2.2 cpu_request=1
+[04:16:35] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[04:31:36] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[04:46:36] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[04:50:36] done: 24/24 jobs, 0 errors, makespan 2040.7s
+[04:51:36] E1d-g900-cd180 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd180/keda-inflight-n24-b3-r2
+[04:51:37] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 180s)
+[04:52:08] image=ngs-worker:0.2.2 cpu_request=1
+[04:52:08] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[05:07:09] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[05:22:09] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[05:26:04] done: 24/24 jobs, 0 errors, makespan 2035.6s
+campaign complete
+[05:27:04] E1d-g900-cd300 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=1 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd300/keda-inflight-n24-b3-r1
+[05:27:06] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 300s)
+[05:27:36] image=ngs-worker:0.2.2 cpu_request=1
+[05:27:36] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[05:42:37] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[05:57:38] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[06:01:28] done: 24/24 jobs, 0 errors, makespan 2031.6s
+[06:02:28] E1d-g900-cd300 mode=keda-inflight jobs=24 bursts=3 gap=900s rep=2 -> /root/k8s-genomics-pipeline-bench/results/E1d-g900-cd300/keda-inflight-n24-b3-r2
+[06:02:30] waiting for KEDA (in-flight aware) to settle at 0 (cooldown 300s)
+[06:03:01] image=ngs-worker:0.2.2 cpu_request=1
+[06:03:01] burst 1/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[06:18:02] burst 2/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[06:33:02] burst 3/3: submitting 8 jobs
+enqueued 8 jobs; queue length: 8
+[06:37:03] done: 24/24 jobs, 0 errors, makespan 2041.4s
+campaign complete
+CD DONE
