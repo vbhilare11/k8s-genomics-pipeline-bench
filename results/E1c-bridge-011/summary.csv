@@ -1,0 +1,2 @@
+mode,replicate,jobs,bursts,gap_s,completed,makespan_s,wait_p50_s,wait_p95_s,job_median_s,first_scaleup_s,replica_seconds,jobs_per_replica_min,git_sha
+keda-inflight,1,24,3,900,24,2042.8,86.3,169.1,76.9,5.6,2122.0,0.679,cacd223a77
