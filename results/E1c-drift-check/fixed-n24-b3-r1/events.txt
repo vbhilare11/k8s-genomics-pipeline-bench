@@ -1,0 +1,19 @@
+LAST SEEN   TYPE      REASON                OBJECT                            MESSAGE
+34m         Normal    Scheduled             pod/ngs-worker-7f8764fb8-zf6s8    Successfully assigned ngs-bench/ngs-worker-7f8764fb8-zf6s8 to niw-lab
+34m         Warning   ScaledObjectDeleted   scaledobject/ngs-worker           ScaledObject was deleted
+34m         Normal    Scheduled             pod/ngs-worker-7f8764fb8-78kgv    Successfully assigned ngs-bench/ngs-worker-7f8764fb8-78kgv to niw-lab
+34m         Normal    Scheduled             pod/ngs-worker-7f8764fb8-662c5    Successfully assigned ngs-bench/ngs-worker-7f8764fb8-662c5 to niw-lab
+34m         Normal    KEDAScalersStopped    scaledobject/ngs-worker           Stopped scalers watch
+34m         Normal    SuccessfulCreate      replicaset/ngs-worker-7f8764fb8   Created pod: ngs-worker-7f8764fb8-78kgv
+34m         Normal    ScalingReplicaSet     deployment/ngs-worker             Scaled up replica set ngs-worker-7f8764fb8 from 0 to 3
+34m         Normal    SuccessfulCreate      replicaset/ngs-worker-7f8764fb8   Created pod: ngs-worker-7f8764fb8-662c5
+34m         Normal    SuccessfulCreate      replicaset/ngs-worker-7f8764fb8   Created pod: ngs-worker-7f8764fb8-zf6s8
+34m         Normal    Pulled                pod/ngs-worker-7f8764fb8-78kgv    Container image "ngs-worker:0.2.2" already present on machine and can be accessed by the pod
+34m         Normal    Pulled                pod/ngs-worker-7f8764fb8-zf6s8    Container image "ngs-worker:0.2.2" already present on machine and can be accessed by the pod
+34m         Normal    Started               pod/ngs-worker-7f8764fb8-zf6s8    Container started
+34m         Normal    Created               pod/ngs-worker-7f8764fb8-zf6s8    Container created
+34m         Normal    Pulled                pod/ngs-worker-7f8764fb8-662c5    Container image "ngs-worker:0.2.2" already present on machine and can be accessed by the pod
+34m         Normal    Started               pod/ngs-worker-7f8764fb8-78kgv    Container started
+34m         Normal    Created               pod/ngs-worker-7f8764fb8-78kgv    Container created
+34m         Normal    Started               pod/ngs-worker-7f8764fb8-662c5    Container started
+34m         Normal    Created               pod/ngs-worker-7f8764fb8-662c5    Container created

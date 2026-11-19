@@ -1,0 +1,4 @@
+{"experiment":"E1c-drift-check","mode":"fixed","jobs":24,"bursts":3,"gap_s":900,"replicate":1,
+ "cooldown_s":60,"min_replicas":0,"startup_delay_s":0,
+ "image":"ngs-worker:0.2.2","git_sha":"cacd223a771ebb02b3a57054e00b2f4456094ce4","start_ts":1795054373.800963051,"end_ts":1795056388.498809412,
+ "makespan_s":2014.7,"completed":24,"errors":0}
